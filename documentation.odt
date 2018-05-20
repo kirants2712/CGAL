@@ -1,0 +1,321 @@
+INSTALLATION AND RUNNING OF CGAL
+       
+
+Please install everything in the given order. I suggest installing ubuntu 18.04. Read all instructions before installing anything.
+
+Initial Installations
+
+sudo apt-get update
+
+sudo apt-get upgrade
+
+sudo apt-get install gcc
+
+sudo apt-get install g++
+ 
+sudo apt-get install build-essential
+
+sudo apt-get install m4
+
+1. CMAKE
+
+go to https://cmake.org/download/
+Download the latest version in Unix/Linux Source category.
+Eg: cmake-3.11.1.tar.gz , cmake-3.11.1.tar.Z
+Extract the downloaded file.
+Go to the folder and open a terminal
+               in the terminal run the following commands :-
+               
+        ./bootstrap
+        make 
+        sudo make install
+
+             (if any of these commands does’nt work add or remove sudo from it)
+
+These steps should lead to a successful installation of cmake.
+
+Restart the system (imp)
+
+2. GMP
+
+go to https://gmplib.org/#DOWNLOAD
+Download the latest version in Unix/Linux Source category.
+Eg: gmp-6.1.2.tar.xz
+Extract the downloaded file.
+Go to the folder and open a terminal
+In the terminal run the following commands :-
+               
+       ./configure
+        make 
+        make check
+        sudo make install
+
+             (if any of these commands does’nt work add or remove sudo from it)
+
+These steps should lead to a successful installation of GMP.
+
+3. MPFR
+
+go to http://www.mpfr.org/mpfr-current/#download
+Download the latest version in Unix/Linux Source category.
+Eg: mpfr-4.0.1.tar.xz
+Extract the downloaded file.
+Go to the folder and open a terminal
+ In the terminal run the following commands :-
+
+       ./configure
+       make 
+       VERBOSE=1 make check
+       sudo make install
+
+             (if any of these commands does’nt work add or remove sudo from it)
+
+These steps should lead to a successful installation of mpfr.
+
+
+4. ZLIB
+
+go to https://zlib.net/
+Download the latest version in Unix/Linux Source category
+Eg: zlib-1.2.11.tar.gz
+Extract the downloaded file.
+Go to the folder and open a terminal.
+In the terminal run the following commands :-
+               
+        ./configure
+        make 
+        sudo make install
+
+             (if any of these commands does’nt work add or remove sudo from it)
+
+These steps should lead to a successful installation of ZLIB.
+
+5. BOOST LIBRARIES
+
+Initial Steps :-
+
+sudo apt-get update
+
+sudo apt-get install python-dev
+
+sudo apt-get install autotools-dev
+
+sudo apt-get install libicu-dev
+
+sudo apt-get install libbz2-dev
+
+sudo apt-get install python-pyicu
+
+sudo apt-get install python-pyicu-dbg
+
+sudo apt-get install lzma
+
+sudo apt-get install liblzma-dev
+
+sudo apt-get install lzma-dev
+
+then,
+go to https://www.boost.org/
+go to the downloads page 
+Eg : https://dl.bintray.com/boostorg/release/1.67.0/source/
+Find the latest version of boost(for Unix/Linux Source) and download it.
+Eg : boost_1_67_0.tar.gz
+Extract the downloaded file.
+Go to the folder and open a terminal
+ In the terminal run the following commands :-
+              
+        ./bootstrap.sh
+        ./b2
+        sudo ./b2 install
+
+        (if any of these commands does’nt work add or remove sudo from it)
+
+These steps should lead to a successful installation of boost libraries.
+
+
+6. OPENGL
+
+
+sudo apt-get update
+
+sudo apt-get upgrade
+
+sudo apt-get install freeglut3
+ 
+sudo apt-get install freeglut3-dev
+
+sudo apt-get install binutils-gold
+
+sudo apt-get install cmake
+
+sudo apt-get install libglew-dev
+
+sudo apt-get install mesa-common-dev
+
+sudo apt-get install libglew1.5-dev
+
+sudo apt-get install libglm-dev
+
+sudo apt-get install libglu1-mesa-dev -y
+
+
+Some of the above commands won’t work in some versions of ubuntu.
+So go to ttps://packages.ubuntu.com/search?keywords=libqt4-opengl  and check versions of packages. Skip packages for other ubuntu versions. 
+
+These steps should lead to a successful installation of OpenGL.
+
+7. TBB
+ 
+Initial Steps:-
+
+sudo apt-get update
+
+sudo apt-get install libtbb-dev
+
+Some of the above commands won’t work in some versions of ubuntu.
+So go to https://packages.ubuntu.com/search?keywords=tbb  and check versions of packages. Skip packages for other ubuntu versions. 
+
+These steps should lead to a successful installation of Intel’s TBB.
+
+8. QT
+
+Initial Steps:-
+
+sudo apt-get update
+
+sudo apt-get install qt4-qmake
+
+sudo apt-get install qt5-qmake
+
+sudo apt-get install libpng-dev
+
+sudo apt-get install zlib1g-dev
+
+sudo apt-get install libfontconfig1
+
+sudo apt-get install build-essential libgl1-mesa-dev
+
+sudo apt install qtchooser
+
+sudo apt-get install qt5-default
+
+go to https://www.qt.io/download
+Download the latest version in Unix/Linux Source category (the opensource version)
+Eg: qt-unified-linux-x64-3.0.4-online.run
+Go to containing folder and open a terminal
+ In the terminal run the following commands :-
+               
+          chmod +x <your file name eg: qt-unified-linux-x64-3.0.4-online.run>
+
+         ./<your file name eg: qt-unified-linux-x64-3.0.4-online.run>
+
+             Follow the instructions on the screen create an account and install it in  
+             the default directory.
+             (if any of these commands does’nt work add or remove sudo from it)
+
+
+These steps should lead to a successful installation of Qt.
+
+9. QGLviewer
+
+Initial Steps:-
+
+sudo apt-get update
+
+sudo apt-get install libqglviewer-dev
+
+sudo apt-get install libqglviewer-dev-qt4
+
+sudo apt-get install libqglviewer-dev-qt5
+
+sudo apt-get install libqglviewer-doc
+
+sudo apt-get install libqglviewer-headers
+
+sudo apt-get install libqglviewer2
+
+sudo apt-get install libqglviewer2-qt4
+
+sudo apt-get install libqglviewer2-qt5
+
+
+Some of the above commands won’t work in some versions of ubuntu.
+So go to https://packages.ubuntu.com/search?keywords=qglviewer and check versions of packages. Skip packages for other ubuntu versions.
+
+go to http://libqglviewer.com/installUnix.html#linux
+Download the latest version in Unix/Linux Source category
+Eg: libQGLViewer-2.7.1.tar.gz
+Extract the downloaded file.
+Go to the folder and open a terminal.
+ In the terminal run the following commands :-
+               
+        qmake
+
+        sudo make 
+
+        sudo make install
+
+             (if any of these commands does’nt work add or remove sudo from it)
+
+These steps should lead to a successful installation of QGLviewer.
+
+10. CGAL
+
+go to https://github.com/CGAL/cgal/releases
+Download the release in Unix/Linux Source category.
+Eg: CGAL-4.12.tar.xz
+            Extract the downloaded file.
+            Copy it to the home folder.
+Go to the copied folder in home and open a terminal
+ In the terminal run the following commands :-
+               
+       sudo cmake -DCMAKE_PREFIX_PATH=/opt/Qt/5.11.0/gcc_64/ .(/opt is default installation directory for Qt)
+       sudo make 
+       sudo make install
+
+             (if any of these commands does’nt work add or remove sudo from it)
+
+These steps should lead to a successful installation of cmake.
+
+Note:-
+After running cmake in CGAL directory, If it shows any errors or missing libraries,  it means that the installation of that library was not successful.
+Install the libraries again and then reinstall CGAL.
+
+Compile Examples 
+
+Go to CGA->examples folder(select an example) and run following commands
+
+sudo cmake -DCMAKE_PREFIX_PATH=/opt/Qt/5.11.0/gcc_64/ -DCGAL_DIR=/home/ivan/CGAL-4.12/ .(/opt is default installation directory for Qt)
+
+sudo make 
+
+then run the generated output.(ie ./<name_of_excecuatable_file>)
+
+Compile Demos 
+
+Go to CGA->Demos folder(Select a demo) and run following commands
+
+sudo cmake -DCMAKE_PREFIX_PATH=/opt/Qt/5.11.0/gcc_64/ -DCGAL_DIR=/home/ivan/CGAL-4.12/ .(/opt is default installation directory for Qt)
+
+sudo make 
+(if any of these commands does’nt work add or remove sudo from it)
+
+then run the generated output.(ie ./<name_of_excecuatable_file>)
+
+
+All these installations have been tested on ubuntu 18.04 bionic-beaver.
+I suggest installing ubuntu 18.04 first.
+
+Note:-
+
+    • There are many more programs to be installed for the proper working of CGAL. This is just a basic installation.
+
+    • Many packages included are not needed so please suggest edits and corrections.
+      
+    • If there are corrections please send an Email.
+
+
+Author :-
+Ivan Biji
+Email: ivanbiji@icloud.com
+GitHub: https://github.com/ivanbiji
